@@ -58,7 +58,8 @@
             gap: 50px; 
         }
         .hero-text { flex: 1; }
-        .hero-text h1 { font-size: 4rem; margin-bottom: 5px; line-height: 1.2; }
+        /* Giảm cỡ chữ h1 để vừa 1 dòng */
+        .hero-text h1 { font-size: 3rem; margin-bottom: 5px; line-height: 1.2; white-space: nowrap; }
         .hero-text h2 { 
             font-family: 'Lora', serif;
             color: var(--text-light); 
@@ -72,7 +73,7 @@
         .hero-text p { font-size: 1.1rem; margin-bottom: 30px; text-align: justify; }
         
         /* Ảnh khung tròn */
-        .hero-image { flex: 1; display: flex; justify-content: center; }
+        .hero-image { flex: 1; display: flex; justify-content: center; align-items: center; }
         .hero-image img { 
             width: 350px; 
             height: 350px; 
@@ -80,6 +81,7 @@
             border-radius: 50%; 
             border: 8px solid white;
             box-shadow: 0 10px 20px rgba(139, 40, 38, 0.15);
+            margin-top: 30px; /* Đẩy ảnh dịch xuống 1 tí cho cân đối */
         }
 
         /* Các Section chung */
@@ -105,6 +107,8 @@
         .about-item h4 { font-size: 1.5rem; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 10px;}
         .about-item ul { list-style: none; }
         .about-item ul li { margin-bottom: 10px; }
+        .about-item a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        .about-item a:hover { text-decoration: underline; }
         .about-item i { color: var(--primary); width: 25px; }
 
         /* Skills */
@@ -158,7 +162,8 @@
 
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: center; }
-            .hero-image img { width: 250px; height: 250px; }
+            .hero-text h1 { white-space: normal; font-size: 2.5rem; }
+            .hero-image img { width: 250px; height: 250px; margin-top: 0; }
             header { flex-direction: column; gap: 15px; }
             .about-grid { flex-direction: column; }
         }
@@ -196,16 +201,16 @@
                     <li><strong>Trường:</strong> Đại học Ngoại thương (Hà Nội)</li>
                     <li><strong>Chuyên ngành:</strong> Kinh doanh Quốc tế (Sinh viên năm 3)</li>
                     <li><strong>Niên khóa:</strong> 2023 - 2027</li>
-                    <li><strong>Thành tích:</strong> GPA 8.4/10 | 03 Bài báo Quốc tế (Q2/Q3)</li>
+                    <li><strong>Định hướng:</strong> Đam mê nghiên cứu khoa học</li>
                 </ul>
             </div>
             <div class="about-item">
-                <h4><i class="fas fa-user"></i> Thông tin cá nhân</h4>
+                <h4><i class="fas fa-user"></i> Liên hệ</h4>
                 <ul>
-                    <li><strong>Họ và tên:</strong> Nguyễn Thanh Xuân</li>
                     <li><strong>Email:</strong> thanhxuanxuan2603@gmail.com</li>
                     <li><strong>Điện thoại:</strong> +84 984 183 226</li>
-                    <li><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/xuanthanh263/" target="_blank">xuanthanh263</a></li>
+                    <li><strong>Facebook:</strong> <a href="https://web.facebook.com/xuaanth" target="_blank">xuaanth</a></li>
                 </ul>
             </div>
         </div>
@@ -215,13 +220,14 @@
         <h3 class="section-title">Skills</h3>
         <div class="skills-container">
             <div class="skill-tag">Tiếng Anh (Thành thạo)</div>
-            <div class="skill-tag">Tiếng Trung (HSK 4)</div>
-            <div class="skill-tag">Python & R</div>
+            <div class="skill-tag">Tiếng Trung (Cơ bản)</div>
             <div class="skill-tag">SQL</div>
             <div class="skill-tag">MS Office (MOS)</div>
-            <div class="skill-tag">Lập kế hoạch (Planning)</div>
+            <div class="skill-tag">Lập kế hoạch</div>
+            <div class="skill-tag">Lãnh đạo</div>
             <div class="skill-tag">Nghiên cứu thông tin</div>
-            <div class="skill-tag">Thuyết trình & Giao tiếp</div>
+            <div class="skill-tag">Giải quyết vấn đề</div>
+            <div class="skill-tag">Giao tiếp & Thuyết trình</div>
         </div>
     </section>
 
@@ -272,16 +278,16 @@
         <h3 class="section-title">Experiences</h3>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-date">09/2025 - Hiện tại</div>
-                <h4>Project Collaborator (Customer Success)</h4>
-                <p><strong>LC Technology LLC</strong><br>
-                Tìm kiếm và chăm sóc khách hàng tiềm năng qua điện thoại và chiến dịch email. Nắm vững quy trình làm việc từ đầu đến cuối của bộ phận Customer Success.</p>
-            </div>
-            <div class="timeline-item">
                 <div class="timeline-date">01/2025 - 02/2025</div>
                 <h4>Short-term Recruitment Intern</h4>
                 <p><strong>G.Empire Real Estate JSC</strong><br>
                 Viết và đăng tin tuyển dụng, liên hệ ứng viên, sàng lọc CV. Liên hệ với nhân viên cũ để phỏng vấn.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">01/2024 - 09/2024</div>
+                <h4>Admissions Counseling Collaborator</h4>
+                <p><strong>FTU Student Forum Club</strong><br>
+                Tư vấn tuyển sinh trực tuyến và tại các sự kiện cho hơn 100+ học sinh, phụ huynh về các chuyên ngành. Viết nội dung thông tin về chương trình học thuật và phương pháp học tập hiệu quả.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">10/2023 - 01/2025</div>
@@ -296,6 +302,7 @@
         <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Nguyễn Thanh Xuân</h2>
         <div style="font-size: 1.5rem;">
             <a href="https://www.linkedin.com/in/xuanthanh263/" target="_blank" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://web.facebook.com/xuaanth" target="_blank" style="color: var(--primary); margin: 0 10px;"><i class="fab fa-facebook"></i></a>
             <a href="mailto:thanhxuanxuan2603@gmail.com" style="color: var(--primary); margin: 0 10px;"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
